@@ -1,0 +1,79 @@
+/* Custom font (optional) */
+@font-face {
+  font-family: "myfont";
+  src: url("CanvaSans-Bold.woff2") format("woff2");
+}
+
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family:The Last Of Us Rough;
+  overflow-x: hidden;
+}
+
+/* Main Section */
+.main {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(CarInCity.jpg) center/cover no-repeat fixed; /* parallax effect */
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+
+
+/* Heading animation */
+.h1 h1 {
+  font-size: 80px;
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  animation: floatText 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-50px); }
+}
+
+/* Button with glow effect */
+.button button {
+  background: linear-gradient(135deg, #1d74c0, #00f2fe);
+  color: #000000;
+  padding: 15px 40px;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0, 255, 254, 0.4);
+  margin-top: 30px;
+}
+
+.button button:hover {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 254, 0.2);
+}
+
+/* Optional: subtle pulse animation on button */
+.button button:hover {
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px rgba(0, 255, 254, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(0, 255, 254, 0.7); }
+  100% { box-shadow: 0 0 10px rgba(0, 255, 254, 0.4); }
+}
